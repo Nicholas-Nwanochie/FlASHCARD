@@ -8,6 +8,8 @@ import Main from "./components/main";
 import Card from "./components/cards/Card";
 import Deck from "./Data/cards.js";
 import Data from './Data/cards'
+import StudyPage from './components/StudyPage'
+import ComicPage from './CardPages.js/Comics'
 
 
 
@@ -146,14 +148,20 @@ console.log(card)
             <Route exact path="/main">
               <Main />
             </Route>
-
+ <Route exact path="/main/study/code">
+            <Card
+              eng={this.state.currentCard.eng}
+              word={this.state.currentCard.word}
+              question={this.state.currentCard.question}
+            />
+            <DrawButton drawCard={this.updateCard} />
+</Route>
             <Route exact path="/main/study">
-              <Card
-                eng={this.state.currentCard.eng}
-                word={this.state.currentCard.word}
-                question={this.state.currentCard.question}
-              />
-              <DrawButton drawCard={this.updateCard} />
+              <StudyPage />
+            </Route>
+
+            <Route exact path="/main/study/comics">
+              <ComicPage />
             </Route>
           </div>
         </BrowserRouter>

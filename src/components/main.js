@@ -15,26 +15,61 @@ const main = () => {
     <>
       <div className="ui large top fixed hidden menu">
         <div className="ui container">
-          <a className="active item">Home</a>
-          <a className="item">Work</a>
-          <a className="item">Company</a>
-          <a className="item">Careers</a>
-          <div className="right menu">
-            <div className="item">
-              <a className="ui button">Log out</a>
-            </div>
+          <a className="toc item">
+            <i className="sidebar icon"></i>
+          </a>
+          <a className=" item">Home</a>
+          <a className="item">
+            <i className="pencil alternate icon"></i>Test
+          </a>
+          <Link to="/main/study" className="item">
+            <i className="book icon"></i>Study
+          </Link>
+          <a className="item">
+            <i className="user circle icon"></i>Profile
+          </a>
+          <a className="item">
+            <i className="users icon"></i>Group
+          </a>
+          <a className="item">
+            <i className="info icon"></i>About Us
+          </a>
+          <div className="right item">
+            <Link className="ui inverted button">
+              {/* <i className="power off icon"></i> */}
+              <GoogleAuth />
+            </Link>
           </div>
         </div>
       </div>
 
       {/* <!-- Sidebar Menu --> */}
       <div className="ui vertical inverted sidebar menu">
-        <a className="active item">Home</a>
-        <a className="item">Work</a>
-        <a className="item">Company</a>
-        <a className="item">Careers</a>
-        <a className="item">Login</a>
-        <a className="item">Signup</a>
+        <a className="toc item">
+          <i className="sidebar icon"></i>
+        </a>
+        <a className=" item">Home</a>
+        <a className="item">
+          <i className="pencil alternate icon"></i>Test
+        </a>
+        <Link to="/main/study" className="item">
+          <i className="book icon"></i>Study
+        </Link>
+        <a className="item">
+          <i className="user circle icon"></i>Profile
+        </a>
+        <a className="item">
+          <i className="users icon"></i>Group
+        </a>
+        <a className="item">
+          <i className="info icon"></i>About Us
+        </a>
+        {/* <div className="right item"> */}
+        <Link className="ui inverted button">
+          {/* <i className="power off icon"></i> */}
+          <GoogleAuth />
+        </Link>
+        {/* </div> */}
       </div>
 
       {/* <!-- Page Contents --> */}
@@ -47,10 +82,10 @@ const main = () => {
               </a>
               <a className=" item">Home</a>
               <a className="item">
-                <i className="book icon"></i>Study
+                <i className="pencil alternate icon"></i>Test
               </a>
               <Link to="/main/study" className="item">
-                <i className="pencil alternate icon"></i>Test
+                <i className="book icon"></i>Study
               </Link>
               <a className="item">
                 <i className="user circle icon"></i>Profile
@@ -131,10 +166,11 @@ const main = () => {
                 <h4 className="ui inverted header">Links</h4>
                 <div className="ui inverted link list">
                   <a href="#" className="item">
-                   Home
+                    Home
                   </a>
                   <a href="#" className="item">
-                   Study         </a>
+                    Study{" "}
+                  </a>
                   <a href="#" className="item">
                     Test
                   </a>
@@ -166,7 +202,7 @@ const main = () => {
                   <label>
                     {" "}
                     <i className="paint brush icon"></i> Made by Nicholas
-                    Nwanochie 
+                    Nwanochie
                     <br></br>
                     <br></br>
                     <i class="upload icon"></i>
